@@ -53,11 +53,15 @@ const Item = styled.div`
   gap: 20px;
   cursor: pointer;
   padding: 7.5px 0;
+
+  &:hover{
+    background-color: ${({theme})=>theme.soft};
+  }
 `;
 
 const Hr = styled.div`
   margin: 15px 0px;
-  border: 0.5px solid ${({theme})=> theme.soft};;
+  border: 0.5px solid ${({theme})=> theme.soft};
 `;
 
 const Login = styled.div``;
