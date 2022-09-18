@@ -21,9 +21,9 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   flex: 1;
-  background-color: ${({theme})=> theme.bgLighter};
+  background-color: ${({ theme }) => theme.bgLighter};
   height: 100vh;
-  color: ${({theme})=> theme.text};
+  color: ${({ theme }) => theme.text};
   position: sticky;
   top: 0;
 `;
@@ -54,14 +54,14 @@ const Item = styled.div`
   cursor: pointer;
   padding: 7.5px 0;
 
-  &:hover{
-    background-color: ${({theme})=>theme.soft};
+  &:hover {
+    background-color: ${({ theme }) => theme.soft};
   }
 `;
 
 const Hr = styled.div`
   margin: 15px 0px;
-  border: 0.5px solid ${({theme})=> theme.soft};
+  border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 
 const Login = styled.div``;
@@ -81,96 +81,98 @@ const Button = styled.button`
 `;
 
 const Title = styled.h2`
-font-size: 14px;
-font-weight: 500;
-color: #aaaaaa;
-margin-bottom: 20px;
-`
+  font-size: 14px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+`;
 
-const Menu = ({darkMode, setDarkMode}) => {
+const Menu = ({ darkMode, setDarkMode }) => {
   return (
-      <Container>
-        <Wrapper>
-          <Link to='/' style={{textDecoration:"none", color:'inherit'}}>
+    <Container>
+      <Wrapper>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <Logo>
             <Img src={youtubeLogo} />
             Doubleda
           </Logo>
-          </Link>
-          <Item>
-            <HomeIcon />
-            Home
-          </Item>
-          <Item>
-            <ExploreOutlinedIcon />
-            Explore
-          </Item>
-          <Item>
-            <SubscriptionsOutlinedIcon />
-            Subscriptions
-          </Item>
-          <Hr />
-          <Item>
-            <VideoLibraryOutlinedIcon />
-            Library
-          </Item>
-          <Item>
-            <HistoryOutlinedIcon />
-            History
-          </Item>
-          <Hr />
-          <Login>
-            Sign in to like Videos, comment and subscribe.
+        </Link>
+        <Item>
+          <HomeIcon />
+          Home
+        </Item>
+        <Item>
+          <ExploreOutlinedIcon />
+          Explore
+        </Item>
+        <Item>
+          <SubscriptionsOutlinedIcon />
+          Subscriptions
+        </Item>
+        <Hr />
+        <Item>
+          <VideoLibraryOutlinedIcon />
+          Library
+        </Item>
+        <Item>
+          <HistoryOutlinedIcon />
+          History
+        </Item>
+        <Hr />
+        <Login>
+          Sign in to like Videos, comment and subscribe.
+          <Link to='signin' style={{textDecoration:'none'}}>
             <Button>
               <AccountCircleOutlinedIcon />
               SIGN IN
             </Button>
-          </Login>
-          <Hr />
-          <Title>Best of Doubleda</Title>
-          <Item>
-            <LibraryMusicOutlinedIcon />
-            Music
-          </Item>
-          <Item>
-            <SportsBasketballOutlinedIcon />
-            Sports
-          </Item>
-          <Item>
-            <SportsEsportsOutlinedIcon />
-            Gaming
-          </Item>
-          <Item>
-            <MovieOutlinedIcon />
-            Movies
-          </Item>
-          <Item>
-            <ArticleOutlinedIcon />
-            News
-          </Item>
-          <Item>
-            <LiveTvOutlinedIcon />
-            Live
-          </Item>
-          <Hr />
-          <Item>
-            <SettingsOutlinedIcon />
-            Settings
-          </Item>
-          <Item>
-            <FlagOutlinedIcon />
-            Report
-          </Item>
-          <Item>
-            <HelpOutlineOutlinedIcon />
-            Help
-          </Item>
-          <Item onClick={() => setDarkMode(!darkMode)}>
+          </Link>
+        </Login>
+        <Hr />
+        <Title>Best of Doubleda</Title>
+        <Item>
+          <LibraryMusicOutlinedIcon />
+          Music
+        </Item>
+        <Item>
+          <SportsBasketballOutlinedIcon />
+          Sports
+        </Item>
+        <Item>
+          <SportsEsportsOutlinedIcon />
+          Gaming
+        </Item>
+        <Item>
+          <MovieOutlinedIcon />
+          Movies
+        </Item>
+        <Item>
+          <ArticleOutlinedIcon />
+          News
+        </Item>
+        <Item>
+          <LiveTvOutlinedIcon />
+          Live
+        </Item>
+        <Hr />
+        <Item>
+          <SettingsOutlinedIcon />
+          Settings
+        </Item>
+        <Item>
+          <FlagOutlinedIcon />
+          Report
+        </Item>
+        <Item>
+          <HelpOutlineOutlinedIcon />
+          Help
+        </Item>
+        <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           {darkMode ? "Light" : "Dark"} Mode
         </Item>
-        </Wrapper>
-      </Container>
+      </Wrapper>
+    </Container>
   );
 };
 export default Menu;
