@@ -20,7 +20,7 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 
 const Container = styled.div`
   flex: 1;
-  background-color: ${({theme})=> theme.bg};
+  background-color: ${({theme})=> theme.bgLighter};
   height: 100vh;
   color: ${({theme})=> theme.text};
   font-family: "Poppins", Open sans;
@@ -31,6 +31,8 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   padding: 18px 26px;
+  font-weight: 300;
+  font-size: 12px;
 `;
 
 const Logo = styled.div`
@@ -75,6 +77,13 @@ const Button = styled.button`
   gap: 5px;
 `;
 
+const Title = styled.h2`
+font-size: 14px;
+font-weight: 500;
+color: #aaaaaa;
+margin-bottom: 20px;
+`
+
 const Menu = ({darkMode, setDarkMode}) => {
   return (
       <Container>
@@ -113,6 +122,7 @@ const Menu = ({darkMode, setDarkMode}) => {
             </Button>
           </Login>
           <Hr />
+          <Title>Best of Doubleda</Title>
           <Item>
             <LibraryMusicOutlinedIcon />
             Music
